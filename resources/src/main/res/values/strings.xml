@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="profile_bottombar_name">Профиль</string>
+    <string name="products_bottombar_name">Товары</string>
+    <string name="price">Цена %1$s₽</string>
+    <string name="article">Арт. %1$s</string>
+    <string name="nameАrticleShare">Название: %1$s\nАртикул: %2$s</string>
+    <string name="share">Поделиться</string>
+    <string name="priceAndUnits">%1$s₽ / %2$s</string>
+
+    <string name="check_your_internet_connection">Проверьте подключение к Интернету</string>
+    <string name="socket_timeout_error">Ошибка тайм-аут</string>
+    <string name="unknown_error">Что-то пошло не так</string>
+    <string name="response_is_null">Ответ пуст</string>
+    <string name="internal_server_error">Внутренняя ошибка сервера</string>
+    <string name="bad_request">Неверный запрос</string>
+    <string name="failed_to_connect_to_the_server">Не удалось подключиться к серверу</string>
+    <string name="unknown_host">Нет интернета</string>
+    <string name="ssl_handshake_failed">Не удалось установить соединение SSL</string>
+    <string name="ssl_protocol_error">Ошибка протокола SSL</string>
+    <string name="error_400_bad_request">Ошибка: 400 Неверный запрос</string>
+    <string name="error_401_unauthorized">Ошибка: 401 Несанкционировано</string>
+    <string name="error_403_forbidden">Ошибка: 403 Запрещено</string>
+    <string name="error_404_not_found">Ошибка: 404 Не найдено</string>
+    <string name="error_number">Ошибка %1$s</string>
+    <string name="error_500_internal_server_error">Ошибка: 500 Внутренняя ошибка сервера</string>
+    <string name="error_501_not_implemented">Ошибка: 501 Не реализовано</string>
+    <string name="error_502_bad_gateway">Ошибка: 502 Bad Gateway</string>
+    <string name="error_302_redirect">Ошибка: 302 Перенаправление</string>
+    <string name="empty_error_message">Пустое сообщение об ошибке</string>
+</resources>
