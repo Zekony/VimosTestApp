@@ -3,7 +3,9 @@ package com.zekony.feature.productinfo.ui.composables
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Button
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
@@ -22,14 +24,21 @@ import com.zekony.utilities.Constants
 
 @Composable
 fun ItemInfoScreen(productItem: DbProductItem) {
-    Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+    val scrollableState = rememberScrollState()
+    Column(
+        modifier = Modifier.verticalScroll(scrollableState),
+        verticalArrangement = Arrangement.spacedBy(8.dp)
+    ) {
         AsyncImage(
             model = Constants.BASE_IMAGE_URL + productItem.imgPreview,
             contentDescription = null,
             contentScale = ContentScale.FillWidth,
             modifier = Modifier.fillMaxWidth()
         )
-        Text(text = stringResource(R.string.article, productItem.gcode), style = MaterialTheme.typography.labelSmall)
+        Text(
+            text = stringResource(R.string.article, productItem.gcode),
+            style = MaterialTheme.typography.labelSmall
+        )
 
         Text(text = productItem.name, style = MaterialTheme.typography.labelMedium)
 
@@ -41,7 +50,11 @@ fun ItemInfoScreen(productItem: DbProductItem) {
         Button(
             onClick = {
                 SharingRepository().shareProductInfo(
-                    context.getString(R.string.nameАrticleShare, productItem.name, productItem.gcode.toString()),
+                    context.getString(
+                        R.string.nameАrticleShare,
+                        productItem.name,
+                        productItem.gcode.toString()
+                    ),
                     context
                 )
             },

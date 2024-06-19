@@ -15,12 +15,12 @@ class ProfileViewModel @Inject constructor(
     private val authRepository: AuthRepository
 ) : ViewModel() {
 
+    private val _state: MutableStateFlow<RegistrationState> = MutableStateFlow(RegistrationState())
+    val state = _state.asStateFlow()
+
     init {
         initialize()
     }
-
-    private val _state: MutableStateFlow<RegistrationState> = MutableStateFlow(RegistrationState())
-    val state = _state.asStateFlow()
 
     private fun initialize() {
         viewModelScope.launch {
